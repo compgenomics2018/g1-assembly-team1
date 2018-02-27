@@ -1,0 +1,19 @@
+import os
+
+fileDir = "/projects/data/team1_genomeAssembly/trimming/fastq/tmpFastq"
+geneList = []
+for file in os.listdir(fileDir):
+        if file.endswith(".fq"):
+                a,b,c = file.split('_')
+                geneList.append(a)
+
+
+unique_geneList = (list(set(geneList)))
+for a in unique_geneList:
+        fFile = '%s_forward_paired.fq' %(a)
+        rFile = '%s_reverse_paired.fq' %(a)
+        forwardFile = os.path.join(fileDir,fFile)
+        reverseFile = os.path.join(fileDir,rFile)
+        #print (forwardFile,reverseFile)
+        skesaCmd = 'skesa --fastq %s --fastq %s --contigs_out %s.skesa.fa' %(forwardFi$
+        os.system(skesaCmd)
