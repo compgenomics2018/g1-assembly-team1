@@ -45,7 +45,7 @@ def generateLibFiles(geneList):
 				fh.close()
 # Running the SSPACE command for scaffolding using default parameters and contig extension (-x 1)
 
-		sspaceCmd = "perl /projects/data/team1_genomeAssembly/SSPACE/sspace_basic/SSPACE_Basic.pl -l /projects/data/team1_genomeAssembly/denovo_skesa/sspaceLibrary/%s -s /projects/data/team1_genomeAssembly/denovo_skesa/skesaoutput/%s.skesa.fa -x 1 -T 8 -b /projects/data/team1_genomeAssembly/denovo_skesa/sspaceOutput/%s.sspace -m 20 -o 15 -a 0.8 -n 12 -g 3 -p 1" %(gene,gene,gene)
+		sspaceCmd = "perl /projects/data/team1_genomeAssembly/SSPACE/sspace_basic/SSPACE_Basic.pl -l /projects/data/team1_genomeAssembly/denovo_skesa/sspaceLibrary/%s -s /projects/data/team1_genomeAssembly/denovo_skesa/skesaoutput/%s.skesa.fa -x 1 -T 8 -b %s.sspace -m 20 -o 15 -a 0.8 -n 12 -g 3 -p 1" %(gene,gene,gene)
 
 
         	os.system(sspaceCmd)
@@ -53,11 +53,11 @@ def generateLibFiles(geneList):
 
 # Remove all the folders created during scaffolding to minimize use of space
 
-		shutil.rmtree('/projects/data/team1_genomeAssembly/denovo_skesa/sspaceOutput/reads')
-		shutil.rmtree('/projects/data/team1_genomeAssembly/denovo_skesa/sspaceOutput/bowtieoutput')
-		shutil.rmtree('/projects/data/team1_genomeAssembly/denovo_skesa/sspaceOutput/pairinfo')
-		shutil.rmtree('/projects/data/team1_genomeAssembly/denovo_skesa/sspaceOutput/intermediate_results')
-		shutil.rmtree('/projects/data/team1_genomeAssembly/denovo_skesa/sspaceOutput/dotfiles')
+		shutil.rmtree('/projects/data/team1_genomeAssembly/denovo_skesa/reads')
+		shutil.rmtree('/projects/data/team1_genomeAssembly/denovo_skesa/bowtieoutput')
+		shutil.rmtree('/projects/data/team1_genomeAssembly/denovo_skesa/pairinfo')
+		shutil.rmtree('/projects/data/team1_genomeAssembly/denovo_skesa/intermediate_results')
+		shutil.rmtree('/projects/data/team1_genomeAssembly/denovo_skesa/dotfiles')
 
 
 geneList = generateGeneList()
