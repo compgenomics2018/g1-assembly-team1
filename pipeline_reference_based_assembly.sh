@@ -2,7 +2,7 @@
 
 outp_fold=/projects/home/shladyshau3/pipeline_ref_based_assembly/output
 ref_file=/projects/home/shladyshau3/reference_genomes/GCA_002893825.1_ASM289382v1_genomic.fna
-inp_fold=/projects/home/shladyshau3/pipeline_ref_based_assembly/fastq
+inp_fold=/projects/data/team1_genomeAssembly/trimming/fastq
 id=SRR3467249
 
 mkdir $outp_fold
