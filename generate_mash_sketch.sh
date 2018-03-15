@@ -16,7 +16,7 @@ mash paste /projects/data/team1_genomeAssembly/reference_based_assembly/mash_ske
 
 mash sketch ${ref_gen_path}/*.fna -o /projects/data/team1_genomeAssembly/reference_based_assembly/all_genomes
 
-mash dist /projects/data/team1_genomeAssembly/reference_based_assembly/mash_sketches_samples/all.msh /projects/data/team1_genomeAssembly/reference_based_assembly/all_genomes.msh > /projects/data/team1_genomeAssembly/reference_based_assembly/ref_gen_vs_sample_all.dist 
+mash dist /projects/data/team1_genomeAssembly/reference_based_assembly/mash_sketches_samples/all.msh /projects/data/team1_genomeAssembly/reference_based_assembly/all_genomes.msh > /projects/data/team1_genomeAssembly/reference_based_assembly/ref_gen_vs_sample_all.dist
 
 mash dist /projects/data/team1_genomeAssembly/reference_based_assembly/mash_sketches_samples/all.msh /projects/data/team1_genomeAssembly/reference_based_assembly/mash_sketches_samples/all.msh > /projects/data/team1_genomeAssembly/reference_based_assembly/samples_vs_samples.dist
 
@@ -24,5 +24,5 @@ cat "" > /projects/data/team1_genomeAssembly/reference_based_assembly/best_genom
 for f in `ls $inp_fold | grep 'SRR' | cut -d '_' -f 1 | uniq`
 do
     g=`cat /projects/data/team1_genomeAssembly/reference_based_assembly/ref_gen_vs_sample_all.dist | awk '/'${f}'/ {print}' | sort -k3 -n | head -n1 | awk '{print $2}'`
-    echo ${f} ${g} >> /projects/data/team1_genomeAssembly/reference_based_assembly/best_genomes_all.txt 
+    echo ${f} ${g} >> /projects/data/team1_genomeAssembly/reference_based_assembly/best_genomes_all.txt
 done

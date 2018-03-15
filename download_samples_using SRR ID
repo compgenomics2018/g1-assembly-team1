@@ -1,0 +1,35 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+my $fileName = "ID.txt";
+my $counter = 0;
+my $SRR;
+my $folder = './fastqRaw';
+my $download;
+
+open(INPUT, $fileName) or die("Could not open file: $fileName.");
+
+unless (-e $folder and -d $folder)
+{
+        print "Create the folder: $folder\n";
+        `mkdir $folder`;
+}
+
+# download files
+while($SRR = <INPUT>)
+{
+        $SRR =~ s/\s+//;
+        $download = system("fastq-dump -split-files -O $folder $SRR");
+        if (not $download)
+        {
+                $counter += 1;
+        }
+        else
+        {
+                print "Failed to download $SRR\n";
+        }
+}
+
+print "Downloaded $counter samples successfully \n";
