@@ -1,3 +1,5 @@
+g1-assembly-team1
+
 List of scripts and supplementary files:
 IDs.txt - file with SRR IDs of samples
 adapters.fa - file with adapters, that we used for trimming
