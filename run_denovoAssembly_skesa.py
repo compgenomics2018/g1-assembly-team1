@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os
 
 sspaceFolder = "/projects/data/team1_genomeAssembly/denovo_skesa/skesaoutput"
