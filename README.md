@@ -12,7 +12,7 @@ adapters.fa - file with adapters, that we used for trimming
 
 download_ref_genomes.sh - script for upload of complete reference genomes of Klebsiella from ncbi
 
-download_samples_using SRR ID -- (sorry for the unexpected space in the name) A script to download splited fastq files using SRR IDs. 
+download_samples_using_SRR_ID -- (sorry for the unexpected space in the name) A script to download splited fastq files using SRR IDs. 
 
 fetch_SRR.pl -- Won't be quite useful since this is one part of the process of converting sample names to accroding SRR IDs.
 
