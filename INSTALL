@@ -1,0 +1,49 @@
+List of required dependencies:
+
+Bcftools (Tools for variant calling and manipulating VCFs and BCFs) Version: 1.6 (using htslib 1.6)
+https://samtools.github.io/bcftools/ 
+
+BLAST Command Line Tools 2.7.1+
+ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
+
+BowTie Version 1.2.2
+http://bowtie-bio.sourceforge.net/index.shtml
+
+BWA (alignment via Burrows-Wheeler transformation), Version: 0.7.17
+http://bio-bwa.sourceforge.net/
+
+CISA Contig Integrator for Sequence Assembly
+http://sb.nhri.org.tw/CISA/en/CISA
+
+fasta_split_scaffolds.py - script for splitting fasta sequences by substings of Ns
+https://github.com/enormandeau/Scripts
+
+FastQC v0.11.7
+https://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+
+Mash version 2.0
+https://github.com/marbl/Mash
+
+MultiQC, version 1.5dev
+http://multiqc.info/
+
+QUAST, Version: 4.6.1
+http://bioinf.spbau.ru/quast
+
+SamTools (Tools for alignments in the SAM format) Version: 1.7
+http://samtools.sourceforge.net/
+
+seqtk Version: 1.2
+https://github.com/lh3/seqtk
+
+Skesa
+TBD
+
+SSPACE BASIC Scaffolding Pre-Assemblies After Contig Extension (SSPACE)
+https://github.com/nsoranzo/sspace_basic
+
+SPAdes genome assembler v3.11.1
+http://bioinf.spbau.ru/spades
+
+Trimmomatic Version 0.36
+http://www.usadellab.org/cms/?page=trimmomatic
